@@ -10,7 +10,7 @@ class Profile(models.Model):
     name = models.CharField(max_length=255, blank=True)
     surname = models.CharField(max_length=255, blank=True)
     email = models.EmailField(max_length=254)
-    phone = PhoneNumberField(null=False, blank=False, unique=True)
+    phone = PhoneNumberField(null=False, blank=False)
     photo = models.ImageField(upload_to='photos/')
 
     def __str__(self):
